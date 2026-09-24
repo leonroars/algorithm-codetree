@@ -1,3 +1,10 @@
+/*
+
+1. 최초 시도 아이디어 : 가로/세로 따로 Cnt
+2. 최적화 아이디어 : Check-Early & Loop variable 두 개 동시에 설정해서 가로 + 세로 동시에(정사각이라 가능)
+
+ */
+
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.BufferedReader;
