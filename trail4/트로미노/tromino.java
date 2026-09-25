@@ -30,7 +30,12 @@ public class Main {
         // 1) 주어진 도형의 특징을 생각했다 -> 정사각 블록 세 개를 이어붙여 만들 수 있는 모든 형태임.
         // 2) 그리고 뒤집거나 회전할 수 있다? -> 어떻게든 3개를 연속하도록 이어붙이기만하면 만족하겠네?
         // 3) 그러면 DFS (Iterative X / Recursive O)
-        boolean[][] visited = new boolean[N][M]; // 이걸 루프 안쪽에서 함수 인자로 던져줄때 매번 생성해서 던져줬더니 MLE. -> 얼마나 대충 나왔을까?
+
+        boolean[][] visited = new boolean[N][M]; // 이걸 루프 안쪽에서 함수 인자로 던져줄때 매번 생성해서 던져줬더니 MLE.
+        // -> 얼마나 대충 나왔을까?
+        //  -> 4만 바이트 크기의 boolean 객체가 최대 4만 번 new 키워드로 생성 -> GC 속도보다 Eden Space 차오른느 속도가 더 빨라 Mem Pressure.
+        
+
 
         for(int r = 0; r < N; r++){
             for(int c = 0; c < M; c++){
